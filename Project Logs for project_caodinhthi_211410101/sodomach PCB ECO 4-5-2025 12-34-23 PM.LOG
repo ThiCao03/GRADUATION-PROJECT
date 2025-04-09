@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=NetE1_5 Pin=E1-5
+Added Pin To Net: NetName=NetE1_5 Pin=M1-0
+Added Net: Name=NetE1_5
+Added Member To Class: ClassName=sodonguyenly Member=Component HD1 header
+Added Member To Class: ClassName=sodonguyenly Member=Component M1 max30102

@@ -1,0 +1,54 @@
+Added Component: Designator=B1(tp4056)
+Added Component: Designator=E1(esp32s3)
+Added Component: Designator=HD1(header)
+Added Component: Designator=HD2(header)
+Added Component: Designator=L1(gc9a01)
+Added Component: Designator=M1(max30102)
+Added Component: Designator=S1(switch)
+Added Pin To Net: NetName=GND Pin=E1-16
+Added Pin To Net: NetName=GND Pin=L1-0
+Added Pin To Net: NetName=GND Pin=M1-3
+Added Net: Name=GND
+Added Pin To Net: NetName=NetB1_2 Pin=B1-2
+Added Pin To Net: NetName=NetB1_2 Pin=HD2-0
+Added Net: Name=NetB1_2
+Added Pin To Net: NetName=NetB1_3 Pin=B1-3
+Added Pin To Net: NetName=NetB1_3 Pin=HD1-0
+Added Net: Name=NetB1_3
+Added Pin To Net: NetName=NetB1_4 Pin=B1-4
+Added Pin To Net: NetName=NetB1_4 Pin=HD1-1
+Added Net: Name=NetB1_4
+Added Pin To Net: NetName=NetB1_5 Pin=B1-5
+Added Pin To Net: NetName=NetB1_5 Pin=S1-0
+Added Net: Name=NetB1_5
+Added Pin To Net: NetName=NetE1_4 Pin=E1-4
+Added Pin To Net: NetName=NetE1_4 Pin=L1-5
+Added Net: Name=NetE1_4
+Added Pin To Net: NetName=NetE1_5 Pin=E1-5
+Added Pin To Net: NetName=NetE1_5 Pin=L1-6
+Added Net: Name=NetE1_5
+Added Pin To Net: NetName=NetE1_6 Pin=E1-6
+Added Pin To Net: NetName=NetE1_6 Pin=L1-7
+Added Net: Name=NetE1_6
+Added Pin To Net: NetName=NetE1_7 Pin=E1-7
+Added Pin To Net: NetName=NetE1_7 Pin=L1-2
+Added Net: Name=NetE1_7
+Added Pin To Net: NetName=NetE1_8 Pin=E1-8
+Added Pin To Net: NetName=NetE1_8 Pin=L1-3
+Added Net: Name=NetE1_8
+Added Pin To Net: NetName=NetE1_9 Pin=E1-9
+Added Pin To Net: NetName=NetE1_9 Pin=M1-1
+Added Net: Name=NetE1_9
+Added Pin To Net: NetName=NetE1_10 Pin=E1-10
+Added Pin To Net: NetName=NetE1_10 Pin=M1-2
+Added Net: Name=NetE1_10
+Added Pin To Net: NetName=NetHD2_1 Pin=HD2-1
+Added Pin To Net: NetName=NetHD2_1 Pin=S1-1
+Added Net: Name=NetHD2_1
+Added Pin To Net: NetName=VCC Pin=E1-15
+Added Pin To Net: NetName=VCC Pin=L1-1
+Added Pin To Net: NetName=VCC Pin=L1-4
+Added Pin To Net: NetName=VCC Pin=M1-4
+Added Net: Name=VCC
+Added Class: Name=sodonguyenly
+Added Rule: Name=Schematic Supply Nets

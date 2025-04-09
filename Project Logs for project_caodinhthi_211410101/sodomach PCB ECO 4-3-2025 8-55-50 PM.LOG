@@ -1,0 +1,14 @@
+Added Component: Designator=B?(tp4056)
+Added Pin To Net: NetName=NetB?_2 Pin=B?-2
+Added Pin To Net: NetName=NetB?_2 Pin=HD2-0
+Added Net: Name=NetB?_2
+Added Pin To Net: NetName=NetB?_3 Pin=B?-3
+Added Pin To Net: NetName=NetB?_3 Pin=HD1-0
+Added Net: Name=NetB?_3
+Added Pin To Net: NetName=NetB?_4 Pin=B?-4
+Added Pin To Net: NetName=NetB?_4 Pin=HD1-1
+Added Net: Name=NetB?_4
+Added Pin To Net: NetName=NetB?_5 Pin=B?-5
+Added Pin To Net: NetName=NetB?_5 Pin=S1-0
+Added Net: Name=NetB?_5
+Added Member To Class: ClassName=sodonguyenly Member=Component B? tp4056

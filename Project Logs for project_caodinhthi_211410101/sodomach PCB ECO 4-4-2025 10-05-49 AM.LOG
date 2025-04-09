@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=VCC Pin=L1-4
+Removed Pin From Net: NetName=NetE1_12 Pin=L1-6
+Removed Pin From Net: NetName=NetE1_13 Pin=L1-7
+Added Pin To Net: NetName=VCC Pin=E1-16
+Added Pin To Net: NetName=VCC Pin=L1-0
+Added Pin To Net: NetName=NetE1_12 Pin=L1-5
+Added Pin To Net: NetName=NetE1_13 Pin=L1-6
+Added Pin To Net: NetName=NetE1_6 Pin=E1-6
+Added Pin To Net: NetName=NetE1_6 Pin=M1-1
+Added Net: Name=NetE1_6
+Added Pin To Net: NetName=NetE1_14 Pin=E1-14
+Added Pin To Net: NetName=NetE1_14 Pin=L1-7
+Added Net: Name=NetE1_14
+Added Member To Class: ClassName=sodonguyenly Member=Component E1 esp32s3
+Added Member To Class: ClassName=sodonguyenly Member=Component HD1 header
+Added Member To Class: ClassName=sodonguyenly Member=Component L1 gc9a01
+Added Rule: Name=Schematic Supply Nets_1

@@ -1,0 +1,13 @@
+Added Component: Designator=R1(res)
+Added Component: Designator=R2(res)
+Added Pin To Net: NetName=GND Pin=B1-2
+Added Pin To Net: NetName=GND Pin=HD2-0
+Added Pin To Net: NetName=NetB1_5 Pin=R1-1
+Added Pin To Net: NetName=GND Pin=R2-0
+Added Pin To Net: NetName=Analog Pin=E1-8
+Added Pin To Net: NetName=Analog Pin=R1-0
+Added Pin To Net: NetName=Analog Pin=R2-1
+Added Net: Name=Analog
+Added Member To Class: ClassName=sodonguyenly Member=Component B1 tp4056
+Added Member To Class: ClassName=sodonguyenly Member=Component R1 res
+Added Member To Class: ClassName=sodonguyenly Member=Component R2 res

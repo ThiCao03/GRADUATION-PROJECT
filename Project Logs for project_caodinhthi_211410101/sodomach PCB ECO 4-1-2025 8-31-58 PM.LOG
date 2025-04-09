@@ -1,0 +1,5 @@
+Change Component Footprint: Designator=E1 Old Footprint=PCBComponent_1 New Footprint=esp32s3
+Added Component: Designator=L1(gc9a01)
+Added Component: Designator=M1(max30102)
+Added Member To Class: ClassName=sodonguyenly Member=Component L1 gc9a01
+Added Member To Class: ClassName=sodonguyenly Member=Component M1 max30102
