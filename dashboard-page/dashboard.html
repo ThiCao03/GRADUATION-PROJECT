@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style_dashboard.css">
+    <!-- Thêm thư viện MQTT.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.min.js"></script>
+    <!-- Firebase SDK -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
+      import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+      
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCTEBIOrig5gq7LASCRq3n6E3ddVxGyVzs",
+        authDomain: "password-project-2988f.firebaseapp.com",
+        projectId: "password-project-2988f",
+        storageBucket: "password-project-2988f.firebasestorage.app",
+        messagingSenderId: "353307837106",
+        appId: "1:353307837106:web:815615ee3d2db5d364ffab",
+        measurementId: "G-8H0E41FQBV"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const auth = getAuth(app);
+      
+      // Make Firebase auth available globally
+      window.auth = auth;
+      window.onAuthStateChanged = onAuthStateChanged;
+
+      // Check authentication status
+      onAuthStateChanged(auth, (user) => {
+        if (!user) {
+          // User is not authenticated, redirect to login page
+          alert("Bạn chưa đăng nhập! Chuyển hướng đến trang đăng nhập.");
+          window.location.href = '../login-page/login.html';
+        } else {
+          // User is authenticated, show dashboard
+          document.querySelector('.dashboard-container').style.display = 'block';
+          document.querySelector('.log-section').style.display = 'block';
+          
+          // Add logout button if it doesn't exist
+          if (!document.getElementById('logout-btn')) {
+            const logoutBtn = document.createElement('button');
+            logoutBtn.id = 'logout-btn';
+            logoutBtn.textContent = 'Đăng xuất';
+            logoutBtn.className = 'logout-button';
+            logoutBtn.onclick = () => {
+              auth.signOut().then(() => {
+                alert('Đăng xuất thành công!');
+                window.location.href = '../login-page/login.html';
+              });
+            };
+            document.querySelector('.dashboard-container').appendChild(logoutBtn);
+          }
+        }
+      });
+    </script>
+    <style>
+      .logout-button {
+        background-color: #ff3860;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      .logout-button:hover {
+        background-color: #e8273b;
+      }
+      .dashboard-container, .log-section {
+        display: none;
+      }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Dashboard</h1>
+        <div id="datetime">Loading date and time...</div>
+        <div id="connection-status">Đang kết nối với HiveMQ...</div>
+        <div id="last-update">Đang chờ dữ liệu...</div>
+        <div id="battery">Pin: --</div>
+        <div id="bpm">Nhịp tim: -- BPM</div>
+        <div id="sp02">SpO2: --%</div>
+    </div>
+    <!-- Updated log table to match the provided style -->
+    <div class="log-section">
+        <h2>Activity Log</h2>
+        <table id="log-table">
+            <thead>
+                <tr>
+                    <th>Thời gian</th>
+                    <th>Nhịp tim (BPM)</th>
+                    <th>SP02 (%)</th>
+                    <th>% Pin</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dữ liệu sẽ được thêm vào đây từ JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script_dashboard.js"></script>
+</body>
+</html>

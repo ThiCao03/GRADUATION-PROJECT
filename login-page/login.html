@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style_login.css" />
+    <title>Login Page | Smartband_T</title>
+    <style>
+      /* Modal styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-content {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+        animation: modalopen 0.4s;
+      }
+      
+      @keyframes modalopen {
+        from {opacity: 0; transform: translateY(-60px);}
+        to {opacity: 1; transform: translateY(0);}
+      }
+
+      .modal-content h2 {
+        margin-top: 0;
+        color: #333;
+      }
+
+      .modal-content p {
+        margin-bottom: 20px;
+        color: #666;
+      }
+
+      .modal-content input {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      .modal-buttons {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .modal-buttons button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s;
+        width: 48%;
+      }
+
+      .reset-btn {
+        background-color: #1a73e8;
+        color: white;
+      }
+
+      .reset-btn:hover {
+        background-color: #1557b0;
+      }
+
+      .cancel-btn {
+        background-color: #f1f1f1;
+        color: #333;
+      }
+
+      .cancel-btn:hover {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container" id="container">
+      <div class="form-container sign-up">
+        <form>
+          <h1>Tạo Tài Khoản</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"
+              ><i class="fa-brands fa-google-plus-g"></i
+            ></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </div>
+          <span>hoặc dùng email của bạn để đăng ký</span>
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <button>Đăng Ký</button>
+        </form>
+      </div>
+      <div class="form-container sign-in">
+        <form>
+          <h1>Đăng Nhập</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"
+              ><i class="fa-brands fa-google-plus-g"></i
+            ></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </div>
+          <span>hoặc dùng email của bạn</span>
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <a href="#" id="forgotPasswordLink">Quên mật khẩu ?</a>
+          <button>Đăng nhập</button>
+        </form>
+      </div>
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Chào mừng trở lại</h1>
+            <p>Đăng ký tài khoản để sử dụng web nhé !</p>
+            <button class="hidden" id="login">Đăng nhập</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>Smartband_T</h1>
+            <p>
+              Đăng nhập để sử dụng các tính năng của trang web
+            </p>
+            <button class="hidden" id="register">Đăng ký </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modal for Password Reset -->
+    <div id="resetPasswordModal" class="modal">
+      <div class="modal-content">
+        <h2>Quên Mật Khẩu</h2>
+        <p>Vui lòng nhập địa chỉ email của bạn để đặt lại mật khẩu</p>
+        <input type="email" id="resetEmail" placeholder="Email" />
+        <div class="modal-buttons">
+          <button class="cancel-btn" id="cancelResetBtn">Hủy</button>
+          <button class="reset-btn" id="sendResetBtn">Gửi</button>
+        </div>
+        <p id="resetMessage" style="margin-top: 15px; font-size: 14px; display: none;"></p>
+      </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
+      import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail, sendEmailVerification } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+      
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCTEBIOrig5gq7LASCRq3n6E3ddVxGyVzs",
+        authDomain: "password-project-2988f.firebaseapp.com",
+        projectId: "password-project-2988f",
+        storageBucket: "password-project-2988f.firebasestorage.app",
+        messagingSenderId: "353307837106",
+        appId: "1:353307837106:web:815615ee3d2db5d364ffab",
+        measurementId: "G-8H0E41FQBV"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const auth = getAuth(app);
+      
+      // Make Firebase auth available globally
+      window.auth = auth;
+      window.createUserWithEmailAndPassword = createUserWithEmailAndPassword;
+      window.signInWithEmailAndPassword = signInWithEmailAndPassword;
+      window.sendPasswordResetEmail = sendPasswordResetEmail;
+      window.sendEmailVerification = sendEmailVerification;
+
+      // Thông báo khi Firebase đã sẵn sàng
+      window.firebaseReady = true;
+      document.dispatchEvent(new Event('firebaseReady'));
+    </script>
+
+    <script src="script_login.js"></script>
+  </body>
+</html>
