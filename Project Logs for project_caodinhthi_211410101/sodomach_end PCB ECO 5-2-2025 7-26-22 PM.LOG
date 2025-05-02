@@ -1,0 +1,114 @@
+Added Component: Designator=B1(tp4056)
+Added Component: Designator=B2(tp4056)
+Added Component: Designator=E1(esp32s3)
+Added Component: Designator=E2(esp32s3)
+Added Component: Designator=HD1(header)
+Added Component: Designator=HD2(header)
+Added Component: Designator=HD3(header)
+Added Component: Designator=L1(gc9a01)
+Added Component: Designator=L2(gc9a01)
+Added Component: Designator=M1(max30102)
+Added Component: Designator=M2(max30102)
+Added Component: Designator=R1(res)
+Added Component: Designator=R2(res)
+Added Component: Designator=R3(res)
+Added Component: Designator=R4(res)
+Added Component: Designator=S1(switch)
+Added Component: Designator=S2(switch)
+Added Pin To Net: NetName=GND Pin=B1-2
+Added Pin To Net: NetName=NetB1_3 Pin=B1-3
+Added Pin To Net: NetName=NetB1_4 Pin=B1-4
+Added Pin To Net: NetName=NetB1_5 Pin=B1-5
+Added Pin To Net: NetName=GND Pin=B2-2
+Added Pin To Net: NetName=NetE1_2 Pin=E1-2
+Added Pin To Net: NetName=NetE1_3 Pin=E1-3
+Added Pin To Net: NetName=NetE1_4 Pin=E1-4
+Added Pin To Net: NetName=Analog Pin=E1-8
+Added Pin To Net: NetName=NetE1_9 Pin=E1-9
+Added Pin To Net: NetName=NetE1_10 Pin=E1-10
+Added Pin To Net: NetName=NetE1_12 Pin=E1-12
+Added Pin To Net: NetName=NetE1_13 Pin=E1-13
+Added Pin To Net: NetName=NetE1_14 Pin=E1-14
+Added Pin To Net: NetName=VCC Pin=E1-15
+Added Pin To Net: NetName=GND Pin=E1-16
+Added Pin To Net: NetName=Analog Pin=E2-8
+Added Pin To Net: NetName=VCC Pin=E2-15
+Added Pin To Net: NetName=GND Pin=E2-16
+Added Pin To Net: NetName=NetB1_3 Pin=HD1-0
+Added Pin To Net: NetName=NetB1_4 Pin=HD1-1
+Added Pin To Net: NetName=GND Pin=HD2-0
+Added Pin To Net: NetName=NetHD2_1 Pin=HD2-1
+Added Pin To Net: NetName=GND Pin=L1-0
+Added Pin To Net: NetName=VCC Pin=L1-1
+Added Pin To Net: NetName=NetE1_9 Pin=L1-2
+Added Pin To Net: NetName=NetE1_10 Pin=L1-3
+Added Pin To Net: NetName=VCC Pin=L1-4
+Added Pin To Net: NetName=NetE1_12 Pin=L1-5
+Added Pin To Net: NetName=NetE1_13 Pin=L1-6
+Added Pin To Net: NetName=NetE1_14 Pin=L1-7
+Added Pin To Net: NetName=GND Pin=L2-0
+Added Pin To Net: NetName=VCC Pin=L2-1
+Added Pin To Net: NetName=VCC Pin=L2-4
+Added Pin To Net: NetName=NetE1_2 Pin=M1-0
+Added Pin To Net: NetName=NetE1_3 Pin=M1-1
+Added Pin To Net: NetName=NetE1_4 Pin=M1-2
+Added Pin To Net: NetName=GND Pin=M1-3
+Added Pin To Net: NetName=VCC Pin=M1-4
+Added Pin To Net: NetName=GND Pin=M2-3
+Added Pin To Net: NetName=VCC Pin=M2-4
+Added Pin To Net: NetName=GND Pin=R1-0
+Added Pin To Net: NetName=Analog Pin=R1-1
+Added Pin To Net: NetName=Analog Pin=R2-0
+Added Pin To Net: NetName=NetB1_5 Pin=R2-1
+Added Pin To Net: NetName=GND Pin=R3-0
+Added Pin To Net: NetName=Analog Pin=R3-1
+Added Pin To Net: NetName=Analog Pin=R4-0
+Added Pin To Net: NetName=NetB1_5 Pin=S1-0
+Added Pin To Net: NetName=NetHD2_1 Pin=S1-1
+Added Pin To Net: NetName=NetB2_3 Pin=B2-3
+Added Pin To Net: NetName=NetB2_3 Pin=HD3-0
+Added Net: Name=NetB2_3
+Added Pin To Net: NetName=NetB2_4 Pin=B2-4
+Added Pin To Net: NetName=NetB2_4 Pin=HD3-1
+Added Net: Name=NetB2_4
+Added Pin To Net: NetName=NetB2_5 Pin=B2-5
+Added Pin To Net: NetName=NetB2_5 Pin=R4-1
+Added Pin To Net: NetName=NetB2_5 Pin=S2-0
+Added Net: Name=NetB2_5
+Added Pin To Net: NetName=NetE2_2 Pin=E2-2
+Added Pin To Net: NetName=NetE2_2 Pin=M2-0
+Added Net: Name=NetE2_2
+Added Pin To Net: NetName=NetE2_3 Pin=E2-3
+Added Pin To Net: NetName=NetE2_3 Pin=M2-1
+Added Net: Name=NetE2_3
+Added Pin To Net: NetName=NetE2_4 Pin=E2-4
+Added Pin To Net: NetName=NetE2_4 Pin=M2-2
+Added Net: Name=NetE2_4
+Added Pin To Net: NetName=NetE2_9 Pin=E2-9
+Added Pin To Net: NetName=NetE2_9 Pin=L2-2
+Added Net: Name=NetE2_9
+Added Pin To Net: NetName=NetE2_10 Pin=E2-10
+Added Pin To Net: NetName=NetE2_10 Pin=L2-3
+Added Net: Name=NetE2_10
+Added Pin To Net: NetName=NetE2_12 Pin=E2-12
+Added Pin To Net: NetName=NetE2_12 Pin=L2-5
+Added Net: Name=NetE2_12
+Added Pin To Net: NetName=NetE2_13 Pin=E2-13
+Added Pin To Net: NetName=NetE2_13 Pin=L2-6
+Added Net: Name=NetE2_13
+Added Pin To Net: NetName=NetE2_14 Pin=E2-14
+Added Pin To Net: NetName=NetE2_14 Pin=L2-7
+Added Net: Name=NetE2_14
+Added Pin To Net: NetName=POWER Pin=E2-17
+Added Pin To Net: NetName=POWER Pin=S2-1
+Added Net: Name=POWER
+Added Class: Name=sodonguyenly_end
+Added Member To Class: ClassName=sodonguyenly Member=Component B1 tp4056
+Added Member To Class: ClassName=sodonguyenly Member=Component E1 esp32s3
+Added Member To Class: ClassName=sodonguyenly Member=Component HD1 header
+Added Member To Class: ClassName=sodonguyenly Member=Component HD2 header
+Added Member To Class: ClassName=sodonguyenly Member=Component L1 gc9a01
+Added Member To Class: ClassName=sodonguyenly Member=Component M1 max30102
+Added Member To Class: ClassName=sodonguyenly Member=Component R1 res
+Added Member To Class: ClassName=sodonguyenly Member=Component R2 res
+Added Member To Class: ClassName=sodonguyenly Member=Component S1 switch
